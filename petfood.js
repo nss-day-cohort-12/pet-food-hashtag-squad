@@ -7,9 +7,11 @@ function executeThisCodeIfXHRFails() {
 
 
 function executeThisCodeAfterFileIsLoaded () {
+
 	console.log("got json");
 	var data = JSON.parse(this.responseText);
 	console.log(data);
+
 	var contentEl = document.getElementById("mainContent");
 
 
@@ -21,6 +23,7 @@ function executeThisCodeAfterFileIsLoaded () {
 	for(var i = 0; i < data.dog_brands.length; i++) {
 		currentFood = data.dog_brands[i];
 		dogFoodData += `<div class='petFoodOutput'>`;
+
 		dogFoodData += `<h1>${data.dog_brands[i].name}</h1></div>`;
 
 		for (var j = 0; j < data.dog_brands[i].types.length; j++) {
@@ -32,19 +35,22 @@ function executeThisCodeAfterFileIsLoaded () {
 			dogFoodData += `<p>${currentFood.types[k].volumes}</p>`;
 			console.log(currentFood.types[k].volumes);
 
+
 			};
 			
 		};
+
 	
 	};
 contentEl.innerHTML = dogFoodData;
+
 };
 
 
 
 
 		
-		
+
 
 var myRequest = new XMLHttpRequest();
 
@@ -55,4 +61,5 @@ myRequest.send();
 
 console.log("Last line in the JavaScript file");
 console.log(Date.now());
+
 
