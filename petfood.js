@@ -47,9 +47,9 @@ function executeThisCodeAfterFileIsLoaded () {
 				var currentFoodTypeVolume = currentFoodType.volumes[k];
 				console.log(currentFoodTypeVolume);
 				foodData += `<p>${currentFoodTypeVolume.name} - $${currentFoodTypeVolume.price}</p>`; // volume of type
-				foodData += `</div>`;
 			};
 		};
+		foodData += `</div>`;
 	}; // End of For Loops 
 	// output to DOM
 
