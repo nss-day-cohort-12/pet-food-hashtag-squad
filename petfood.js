@@ -60,6 +60,9 @@ function catFoodLoaded() {
 		catFoodData += `<div class='catFoodOutput'>`;
 		catFoodData += `<h1 id='catBrandName'>${currentFood.name}</h1>`;
 		// console.log("cat first for", currentFood);
+		for (var b = 0;b < catData.cat_brands[i].breeds.length; b++) {
+			catFoodData += `<h4 id='catBreeds'>${currentFood.breeds[b]}</h4>`;
+		};
 
 
 		for (var j = 0; j < catData.cat_brands[i].types.length; j++) {
