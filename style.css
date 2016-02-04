@@ -1,9 +1,60 @@
-.petFoodOutput {
-	width: 20%;
-	height: 400px;
-	margin: 3px 2%;
-	text-align: center;
-	border: 2px solid gray;
-	float: left;
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
 
+container {
+    background: url(https://images.unsplash.com/photo-1437075130536-230e17c888b5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2ba040ac65886f747149b30a068ad981);
+}
+
+.petFoodOutput {
+    width: 40%;
+    height: 400px;
+    margin: 5%;
+    text-align: center;
+    border: 5px groove gray;
+    float: left;
+    overflow: auto;
+}
+
+img#cat-and-dog {
+    display: block;
+    margin: 5% auto;
+}
+
+div#dogContent {
+}
+
+.active {
+
+}
+
+h1 {
+    text-align: center;
+}
+
+span#hashtag-squad {
+    font-family: 'Droid Serif', serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #2E8A5F;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+#dogContent, #catContent {
+    margin: 1em auto;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
