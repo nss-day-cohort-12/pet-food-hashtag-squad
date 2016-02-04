@@ -7,23 +7,22 @@ function executeThisCodeIfXHRFails() {
 function executeThisCodeAfterFileIsLoaded () {
 	// parse JSON
 	console.log("got json");
-	var data = JSON.parse(this.responseText);
+	var data = JSON.parse(this.responseText); // parsing makes the file a regular javascript object 
 	console.log(data);
 	// get DOM element for output
-	var contentEl = document.getElementById("mainContent");
-	// set up variables to hold current item in loop and end output
-	var foodData = "";
+	var dogEl = document.getElementById("dogContent");
+	var catEl = document.getElementById("catContent");
+
+	var foodData = ""; // initialize output string that will hold entire output. 
 	if (data.dog_brands) {
 		var brands = data.dog_brands;
 	} else if (data.cat_brands){
-		var brands = data.cat_brands;
+		var brands = data.cat_brands;  // checking to see if what data we are using to determine how we handle it. 
 	}
-	console.log("brand is ", brands);
-	console.log('length is: ', brands.length);
+	
 	// inital loop of each brand
 	for(var i = 0; i < brands.length; i++) {
 		var currentFood = brands[i];
-		console.log("i is ", i);
 		console.log("current food is: ", currentFood);
 		foodData += `<div class='petFoodOutput'>`; // opening div tag
 		foodData += `<h1>${currentFood.name}</h1>`; // brand name
@@ -53,15 +52,21 @@ function executeThisCodeAfterFileIsLoaded () {
 		};
 	}; // End of For Loops 
 	// output to DOM
-	contentEl.innerHTML += foodData;
+
+	if (data.dog_brands) {			// testing to see what the data is and outputting it to corresponding variable. 
+		dogEl.innerHTML = foodData;
+	} else if (data.cat_brands){
+		catEl.innerHTML = foodData;
+	}
+
 }; // End of ExecuteThisCodeAfterFileIsLoaded function 
 
-var myDogRequest = new XMLHttpRequest();
+var myDogRequest = new XMLHttpRequest(); // creates new xml http request object 
 
 myDogRequest.addEventListener("load", executeThisCodeAfterFileIsLoaded);
 myDogRequest.addEventListener("error", executeThisCodeIfXHRFails);
-myDogRequest.open("GET", "dogfood.json");
-myDogRequest.send();
+myDogRequest.open("GET", "dogfood.json"); // gets data from file path. could be url 
+myDogRequest.send(); // sends the created request 
 
 var myCatRequest = new XMLHttpRequest();
 
