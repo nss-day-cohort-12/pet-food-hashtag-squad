@@ -2,17 +2,33 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Hashtag Pet Food</title>
-		<link rel="stylesheet" href="style.css">
+		<title>Hashtag Squad Pet Food</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic|Ubuntu' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#" id="welcomeLink">Welcome</a></li>
+            <li id="dogFoodLink"><a href="#">Dog Food</a></li>
+            <li id="catFoodLink"><a href="#">Cat Food</a></li>
+        </ul>
+        
+        <div class="container">
+            <div id="welcome">
+                <h1>Welcome to <span id="hashtag-squad">#Hashtag Squad</span> Pet Foods</h1>
+                <img id="cat-and-dog" src="http://www.petsworld.in/blog/wp-content/uploads/2015/05/dog-kitten.jpg">
+            </div>
 
+    		<div id="dogContent" class="hidden"></div>
+    		<div id="catContent" class="hidden"></div>
+        </div>
 
-		<div id="dogContent"></div>
-		<div id="catContent"></div>
-
-
-
-		<script type="text/javascript" src="petfood.js" ></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="petfood.js"></script>
+		<script type="text/javascript" src="events.js"></script>
 	</body>
 </html>
