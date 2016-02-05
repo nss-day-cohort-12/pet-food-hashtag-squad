@@ -2,23 +2,19 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-container {
-    background: url(https://images.unsplash.com/photo-1437075130536-230e17c888b5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=2ba040ac65886f747149b30a068ad981);
-}
-
 .petFoodOutput {
     width: 40%;
     height: 400px;
     margin: 5%;
     text-align: center;
-    border: 5px groove gray;
+    border: 5px groove #2E8A5F;
     float: left;
-    overflow: auto;
 }
 
 img#cat-and-dog {
     display: block;
     margin: 5% auto;
+    border: 4px inset #2E8A5F;
 }
 
 div#dogContent {
@@ -45,6 +41,7 @@ h3 {
 
 h4 {
     font-size: 1.2em;
+    padding: 0 2%;
 }
 
 #dogContent, #catContent {
